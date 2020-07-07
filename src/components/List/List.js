@@ -39,7 +39,7 @@ class List extends React.Component {
       }
     ));
   }
-  
+
   render() {
     const { title, image, description, columns, addColumn } = this.props;
     return (
@@ -55,7 +55,6 @@ class List extends React.Component {
           <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
         </div>
       </section>
-    );
     );
   }
 }
