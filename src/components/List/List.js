@@ -22,7 +22,7 @@ class List extends React.Component {
     const { title, image, description, columns, addColumn } = this.props;
     return (
       <section className={styles.component}>
-         <Hero titleText={this.props.title} image={this.props.heroImage}/>
+         <Hero titleText={this.props.title} image={this.props.image}/>
          <div className={styles.description}>{ReactHtmlParser(description)}</div>
         <div className={styles.columns}>
           <Column title="Animals"/>
