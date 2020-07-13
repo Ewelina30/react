@@ -10,23 +10,23 @@ class Card extends React.Component {
     index: PropTypes.number,
   };
 
-   render() {
-    const { title, id, index } = this.props;
-      return (
-         <Draggable draggableId={id} index={index}>
-         {(provided) => (
-           <article
-             className={styles.component}
-             {...provided.draggableProps}
-             {...provided.dragHandleProps}
-             ref={provided.innerRef}
-           >
-             {title}
-          </article>
-       )}
-     </Draggable>
-     );
- }
+  // render() {
+  //   const { title, id, index } = this.props;
+  //   return (
+  //     <Draggable draggableId={id} index={index}>
+  //       {(provided) => (
+  //         <article
+  //           className={styles.component}
+  //           {...provided.draggableProps}
+  //           {...provided.dragHandleProps}
+  //           ref={provided.innerRef}
+  //         >
+  //           {title}
+  //         </article>
+  //       )}
+  //     </Draggable>
+  //   );
+  // }
 
   render() {
     const {title} = this.props;
