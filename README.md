@@ -1,1 +1,1 @@
-https://react-i-webpackherokuapp.com
+https://react-i-webpack.herokuapp.com
