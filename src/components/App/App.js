@@ -1,19 +1,23 @@
 import React from 'react';
-import styles from './App.scss';
-import List from '../List/List.js';
-import {pageContents, listData} from '../../data/dataStore';
+import Home from '../Home/HomeContainer.js';
+import Info from '../Info/Info.js';
+import Faq from '../Faq/Faq.js';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import MainLayout from '../MainLayout/MainLayout.js';
 
-class App extends React.Component {
-  render() {
-    return (
-      <main className={styles.component}>
-        <h1 className={styles.title}>{pageContents.title}</h1>
-        <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
-        <List {...listData} />
-      </main>
-    );
-  }
-}
+
+
+const App = () => (
+  <BrowserRouter>
+    <MainLayout>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/info' component={Info} />
+        <Route exact path='/faq' component={Faq} />
+
+      </Switch>
+    </MainLayout>
+  </BrowserRouter>
+);
 
 export default App;
-
